@@ -1,0 +1,245 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e6f2ff;
+    color: #222;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    transition: background-color 0.5s ease;
+}
+
+
+header, main, footer {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 20px 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+}
+
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+label {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    min-width: 200px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #2980b9;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #1c5980;
+    box-shadow: 0 0 6px #1c5980;
+}
+
+button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1c5980;
+}
+
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    font-weight: 700;
+    color: #1c5980;
+}
+
+h3 {
+    color: #2c3e50;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 15px;
+}
+
+thead th {
+    background-color: #2980b9;
+    color: white;
+    padding: 12px 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 8px 8px 0 0;
+}
+
+tbody tr {
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #d9eaff;
+}
+
+tbody td {
+    padding: 12px 10px;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+footer {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1c5980;
+    margin-top: auto;
+}
+
+
+.current-weather {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.current-main {
+    display: flex;
+    align-items: center;
+    flex: 1 1 300px;
+    margin-bottom: 15px;
+}
+
+.current-temp {
+    font-size: 48px;
+    font-weight: bold;
+    margin-right: 15px;
+    color: #1c5980;
+}
+
+.current-details {
+    flex: 1 1 250px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.current-details p {
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+
+.aqi {
+    background-color: rgba(240, 248, 255, 0.85);
+    border-left: 5px solid #2980b9;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    backdrop-filter: blur(6px);
+}
+
+.aqi h3 {
+    margin-top: 0;
+    color: #1c5980;
+    font-size: 1.2rem;
+}
+
+.aqi p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+    .forecast-day {
+        width: calc(33.33% - 15px);
+    }
+
+    .current-weather {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .current-main {
+        margin-bottom: 10px;
+    }
+
+    .current-temp {
+        font-size: 40px;
+    }
+
+    .weather-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .forecast-day {
+        width: calc(50% - 15px);
+    }
+
+    .current-temp {
+        font-size: 36px;
+    }
+
+    .current-details p,
+    .aqi p {
+        font-size: 0.9rem;
+    }
+
+    .aqi {
+        padding: 12px 15px;
+    }
+}
